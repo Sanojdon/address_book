@@ -4,5 +4,28 @@
 Home Page View
 {% endblock %}
 {% block content %}
-<h1>Happy Home Page Amigo</h1>
+<h1>Addresses of My Friends</h1>
+<div class="container">
+	<div class="row">
+{% if all_addresses %}
+	{% for rec in all_addresses %}
+	<div class="col-sm">
+	<div class="card" style="width: 18rem;" >
+  		<div class="card-body">
+  			<h5 class="card-title">{{ rec.name }}</h5>
+    		{{ rec.email }}<br>
+			{{ rec.phone }}<br>
+			{{ rec.city }}<br>
+			{{ rec.gender }}<br>
+			{{ rec.state }}<br>
+			{{ rec.zipcode }}<br>
+			{{ rec.address }}<br>
+			<a href="#" class="btn btn-secondary">Edit</a>
+		</div>
+	</div>
+	</div>
+	{% endfor %}
+{% endif%}
+</div>
+</div>
 {% endblock %}
