@@ -20,7 +20,7 @@ Home Page View
 			{{ rec.state }}<br>
 			{{ rec.zipcode }}<br>
 			{{ rec.address }}<br>
-			<a href="#" class="btn btn-secondary">Edit</a>
+			<a href="{% url 'edit' rec.id %}" class="btn btn-secondary">Edit</a>
 		</div>
 	</div>
 	</div>
